@@ -11,7 +11,7 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 })
 
-export async function POST(req: Request) {
+export async function POST(req: Request) {  
   const json = await req.json()
   const { messages, previewToken } = json
   const userId = (await auth())?.user.id
@@ -32,6 +32,7 @@ export async function POST(req: Request) {
     temperature: 0.7,
     stream: true
   })
+  //console.log(res);
 
   const stream = OpenAIStream(res, {
     async onCompletion(completion) {

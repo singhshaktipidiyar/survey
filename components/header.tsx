@@ -61,6 +61,8 @@ export function Header() {
         </React.Suspense>
       </div>
       <div className="flex items-center justify-end space-x-2">
+      <Link href='/' className='mr-3 text-sm'> Chat </Link>
+      <Link href='/dashboard' className='mr-3 pr-3 text-sm'> Dashboard </Link>
         <a
           target="_blank"
           href="https://github.com/vercel/nextjs-ai-chatbot/"
